@@ -41,7 +41,7 @@ pvca <- function (abatch,expInfo) {
   pc_n=5
 
   pc_data_matrix <- matrix(data = 0, nrow = (expDesignRowN*pc_n), ncol = 1)
-  mycounter = 0
+  mycounter = 0 
   for (i in 1:pc_n){
     for (j in 1:expDesignRowN){
       mycounter <- mycounter + 1
@@ -135,7 +135,7 @@ app_server <- function(input, output, session) {
 
   observeEvent(input$file_exprs, {
     withProgress(message = "Generating PCA plot...", value = 0, {
-      exprs <- read_tsv(input$file_exprs$datapath)
+      exprs <- readr::read_tsv(input$file_exprs$datapath)
       aaa<<-exprs
       row.names(exprs)<-exprs[[1]]
       exprs<-exprs[-1]
@@ -144,7 +144,7 @@ app_server <- function(input, output, session) {
 
   observeEvent(input$file_metadata, {
     withProgress(message = "Generating PCA plot...", value = 0, {
-      metadata <- read_tsv(input$file_metadata$datapath)
+      metadata <- readr::read_tsv(input$file_metadata$datapath)
       bbb<<-metadata
       row.names(metadata)<-metadata[[1]]
       metadata <- metadata[-1]
