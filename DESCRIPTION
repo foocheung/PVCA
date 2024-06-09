@@ -1,0 +1,33 @@
+Package: PVCA
+Title: An Amazing Shiny App
+Version: 0.0.0.9000
+Authors@R: 
+    person(given = "firstname",
+           family = "lastname",
+           role = c("aut", "cre"),
+           email = "your@email.com")
+Description: What the package does (one paragraph).
+License: What license is it under?
+Imports: 
+    config (>= 0.3.2),
+    golem (>= 0.4.1),
+    shiny (>= 1.8.1.1),
+    Biobase,
+    tidyverse,
+    qusage,
+    boot,
+    ggthemes,
+    pheatmap,
+    matrixStats,
+    RColorBrewer,
+    reshape2,
+    lme4,
+    readr,
+    metap,
+    circlize,
+    corrplot,
+    ComplexHeatmap,
+    ggpubr
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.1.1
